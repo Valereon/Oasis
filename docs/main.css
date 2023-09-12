@@ -1,6 +1,88 @@
 html,
 body {
+
+  background-color: black;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+}
+
+
+
+
+.titleLarge{
+  animation: fadeIn ease 7s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
+  font-size: 100px;
+  color: white;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+.dialogue{
+  font-size: 50px;
+  color: white;
+  text-align: center;
+}
+
+
+.outlined-button{
+  color: white;
+  background-color: black;
+  border: 4px solid white;
+  transition-duration: .2s;
+  font-size: large;
+}
+
+.outlined-button:hover{
+  color: black;
+  background-color: white;
+  font-size: larger;
+}
+
+.container{
+  padding: 10px;
+}
+
+.counter{
+  color: white;
+  font-size: xx-large;
+}
+
+.button-grid{
+  display: grid;
+  grid-row: auto;
+  gap: 10px;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.center-vert-horiz {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.center-vert-horiz-above{
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
