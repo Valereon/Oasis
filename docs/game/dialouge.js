@@ -19,9 +19,11 @@ export function setup() {
 
 function updateStoryVars(textOfButton) {
     const textNode = story.find(textNode => textNode.id === currentLine);
-    if(textNode.Options){
-        state = Object.assign(state, textNode.Options.setState)
-        currentLine = textNode.Options.nextText;
+    const optionChose = story.find(optionChose => optionChose.innerHTML === textOfButton)
+    console.log(optionChose)
+    if(optionChose){
+        // state = Object.assign(state, optionChose.setState)
+        currentLine = optionChose.nextText;
     }
     else
         currentLine = textNode.nextText;
@@ -54,7 +56,11 @@ function destoryButtons() {
 
 
 export function dialouge() {
-    const textNode = story.find(textNode => textNode.id === currentLine);
+
+    const textNode = story.find(({ id }) => id === currentLine);
+    console.log(textNode)
+
+
     storyText.innerHTML = textNode.text;
     if (textNode.Options) {
         isInQuestion = true;
@@ -79,7 +85,7 @@ document.addEventListener("click", function (e) {
     if (e.target.classList.contains("button-grid")) {
         isInQuestion = false;
         destoryButtons();       
-        updateStoryVars(e.target.innerHTML);
+        updateStoryVars(e.target);
         dialouge();
     }
 });

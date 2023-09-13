@@ -79,6 +79,7 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
 .center-vert-horiz-above{
   position: absolute;
   left: 50%;
