@@ -1,89 +1,123 @@
 html,
 body {
+	height: 100%;
+}
 
-  background-color: black;
-  margin: 0;
-  padding: 0;
+.black-bkg {
+	background-color: #131212;
+
+}
+
+.term-text-color {
+	color: #2fc313;
+}
+
+.parent {
+	min-height: 100vh;
+}
+
+.col>* {
+	margin: 15px;
 }
 
 
 
-
-.titleLarge{
-  animation: fadeIn ease 7s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-
-  font-size: 100px;
-  color: white;
-  text-align: center;
+#play-progress-bar {
+	animation: progress-bar-random 5s forwards linear;
+	animation-delay: 2s;
+	background-color: #2fc313;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
+@keyframes progress-bar-random {
+	0% {
+		width: 0%;
+	}
+
+	10% {
+		width: 20%;
+	}
+  20% {
+    width: 30%;
   }
-  50% {
+  40% {
+    width: 30%;
+  }
+  65% {
+    width: 60%
+  }
+  67% {
+    width: 61%;
+  }
+  75% {
+    width: 63%;
+  }
+	90% {
+		width: 80%;
+	}
+
+	100% {
+		width: 100%;
+	}
+}
+
+.loading-screen {
+	animation: loading-animation 12s;
+}
+
+.loading-screen-flicker{
+	animation: flicker-loading-screen 5s ease-in-out;
+}
+
+@keyframes loading-animation {
+	0% {
+		opacity: 0;
+	}
+  40% {
     opacity: 1;
   }
-  100% {
-    opacity: 0;
+
+  75%{
+    opacity: 1;
   }
-}
 
+	99% {
+		opacity: 0.01;
+		width: 100%;
+		height: 100%;
+	}
 
-.dialogue{
-  font-size: 50px;
-  color: white;
-  text-align: center;
-}
-
-
-.outlined-button{
-  color: white;
-  background-color: black;
-  border: 4px solid white;
-  transition-duration: .2s;
-  font-size: large;
-}
-
-.outlined-button:hover{
-  color: black;
-  background-color: white;
-  font-size: larger;
-}
-
-.container{
-  padding: 10px;
-}
-
-.counter{
-  color: white;
-  font-size: xx-large;
-}
-
-.button-grid{
-  display: grid;
-  grid-row: auto;
-  gap: 10px;
-  margin: 10px;
-  justify-content: center;
-  align-items: center;
+	100% {
+		opacity: 0;
+		width: 0;
+		height: 0;
+	}
 }
 
 
 
-.center-vert-horiz {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.center-vert-horiz-above{
-  position: absolute;
-  left: 50%;
-  top: 40%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+@keyframes flicker-loading-screen {
+	0% {
+		opacity: 0.1;
+	}
+	25%{
+		opacity: 0.2;
+	}
+	40% {
+		opacity: 0.1;
+	}
+	55% {
+		opacity: 0.3;
+	}
+	60% {
+		opacity: 0.1;
+	}
+	65% {
+		opacity: 0.2;
+	}
+	70% {
+		opacity: 0.1;
+	}
+	100% {
+		opacity: 1;
+	}
 }
