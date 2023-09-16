@@ -1,3 +1,3 @@
-# Web-rouglike-rotjs
- a rouglike written in rotjs
+# Oasis
+ a Game Written in javascript for the web
 
