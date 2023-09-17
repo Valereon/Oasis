@@ -14,27 +14,31 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="./game/main.js" type="module"></script>
 
+
 </head>
 
 <body class="black-bkg term-text-color">
-    <div class="container h-100 d-flex justify-content-center align-items-center loading-screen loading-screen-flicker">
+
+
+
+
+    <div class="container h-100 d-flex justify-content-center align-items-center ">
         <div class="row">
             <div class="col text-center">
-
-
-
-                <img src="assets/img/ihatecss.png" height="500">
-                <h1>Now Loading...</h1>
-                <div class="progress">
-                    <div class="progress-bar" id="play-progress-bar" role="progressbar" aria-valuenow="0"
-                        aria-valuemin="0" aria-valuemax="100">
-
-                    </div>
+                <div class="power-button-glow " id="play-power-button">
+                    <button class="power-button-button" onclick="load()" id="playButton">
+                        <div class="semi-circle">
+                            <div class="line">
+                                
+                            </div>
+                        </div>
+                    </button>
                 </div>
+
+                
             </div>
         </div>
     </div>
-    <h1>testing</h1>
 </body>
 
 </html>

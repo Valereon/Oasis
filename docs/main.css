@@ -5,7 +5,6 @@ body {
 
 .black-bkg {
 	background-color: #131212;
-
 }
 
 .term-text-color {
@@ -20,13 +19,60 @@ body {
 	margin: 15px;
 }
 
+.semi-circle{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	border: 5px solid #2fc313;
+	border-top: 8px solid transparent;
+}
+
+.boot{
+	height: auto;
+	overflow: scroll;
+}
+
+.line{
+	width: 5px;
+	height: 50px;
+	background-color: #2fc313;
+	translate:  40px -15px;
+}
+
+.power-button-button{
+	width: 0px;
+	height: 0px;
+	padding-left: 0; padding-right: 0;
+	border-left-width: 0; border-right-width: 0;
+	white-space: nowrap;
+	color:transparent;
+	background-color: transparent;
+	border-color: transparent;
+}
+
+.power-button-glow{
+	width: 0px;
+	height: 0px;
+	background-color: #2fc313;
+	box-shadow: 
+	0 0 80px 30px #2fc313,
+	0 0 120px 60px #299439,
+	0 0 170px 90px #427a2c;
+}
+
+#play-power-button{
+	animation: blink-power-button 3s  ease-in-out infinite;
+}
 
 
 #play-progress-bar {
+	width: 0%;
 	animation: progress-bar-random 5s forwards linear;
 	animation-delay: 2s;
 	background-color: #2fc313;
 }
+
+
 
 @keyframes progress-bar-random {
 	0% {
@@ -43,7 +89,7 @@ body {
     width: 30%;
   }
   65% {
-    width: 60%
+    width: 60%;
   }
   67% {
     width: 61%;
@@ -60,64 +106,24 @@ body {
 	}
 }
 
-.loading-screen {
+.loading-screen>div {
 	animation: loading-animation 12s;
 }
 
-.loading-screen-flicker{
-	animation: flicker-loading-screen 5s ease-in-out;
-}
+
 
 @keyframes loading-animation {
 	0% {
-		opacity: 0;
+		width: 0%;
 	}
-  40% {
-    opacity: 1;
-  }
-
-  75%{
-    opacity: 1;
-  }
-
-	99% {
-		opacity: 0.01;
-		width: 100%;
-		height: 100%;
-	}
-
 	100% {
-		opacity: 0;
-		width: 0;
-		height: 0;
+		width: 100%;
 	}
 }
 
 
-
-@keyframes flicker-loading-screen {
-	0% {
-		opacity: 0.1;
-	}
-	25%{
-		opacity: 0.2;
-	}
-	40% {
-		opacity: 0.1;
-	}
-	55% {
-		opacity: 0.3;
-	}
-	60% {
-		opacity: 0.1;
-	}
-	65% {
-		opacity: 0.2;
-	}
-	70% {
-		opacity: 0.1;
-	}
-	100% {
-		opacity: 1;
+@keyframes blink-power-button {
+	50%{
+		opacity: 0;
 	}
 }

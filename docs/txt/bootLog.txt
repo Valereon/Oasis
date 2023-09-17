@@ -1,0 +1,96 @@
+Booting Oasis OS...
+
+Initializing bootloader...
+  - Bootloader version: Grub2.4.0
+  - Booting from device: /dev/sda
+  - Secure Boot: Disabled
+  - Boot options: quiet splash
+
+Loading kernel: vmlinuz-5.10.0-oasis
+Loading initial ramdisk: initrd-5.10.0-oasis
+
+Welcome to Oasis OS v2.0.0 (Cactus)
+
+Initializing hardware...
+  - CPU: Oasis Quantum Octa-Core 4.2GHz
+  - GPU: Mirage Radeon RX 7700 XT
+  - RAM: 64GB DDR5 Oasis HyperFlow
+  - Storage: 1TB NVMe SSD Oasis Blaze
+  - BIOS version: OasisBios 1.1.0
+
+Detecting peripherals...
+  - USB controllers: OK
+  - Bluetooth: OK
+  - Audio devices: OK
+  - Display: OK
+  - Webcam: Detected, Oasis Vision Pro
+  - Gamepad: Connected
+  - USB hubs: 2 found
+
+Setting system clock to UTC...
+  - Current time: Tue Sep 20 15:32:47 UTC 2023
+
+Configuring network interfaces...
+  - Ethernet: Detected, IP address assigned (192.168.1.100)
+    - MAC address: 00:1A:2B:3C:4D:5E
+    - Subnet mask: 255.255.255.0
+    - Default gateway: 192.168.1.1
+    - DHCP: Enabled
+  - Wi-Fi: Available networks found
+    - SSID: MyWirelessNetwork
+    - Signal strength: 90%
+    - Encryption: WPA2-PSK
+    - Connected
+  - VPN: Disconnected
+    - VPN server: vpn.example.com
+
+Mounting filesystems...
+  - /dev/sda1 -> /
+  - /dev/sda2 -> /home
+  - /dev/sdb1 -> /mnt/backup
+  - /dev/sdc1 -> /mnt/games
+  - /dev/sdd1 -> /mnt/music
+  - /dev/sde1 -> /mnt/movies
+
+Starting system services...
+  - udevd: OK
+  - systemd-logind: OK
+  - dbus: OK
+  - avahi-daemon: OK
+  - cron: OK
+  - printer: OK
+  - sshd: OK
+  - firewall: OK
+  - sensors: OK
+
+Initializing audio subsystem...
+  - Detected Realtek HD Audio
+  - Channels: 7.1
+  - Surround Sound: Enabled
+  - Equalizer: Custom settings loaded
+  - Default audio output: HDMI
+
+Starting display manager...
+  - Welcome screen displayed
+  - Resolution: 1920x1080
+  - Refresh rate: 144Hz
+  - Multiple displays detected
+
+Starting Oasis Desktop Environment...
+  - Version: Cactus Desktop 3.0
+  - Welcome sound played
+  - Desktop icons loaded
+  - Weather widget: Sunny, 25°C
+  - Calendar events: None
+
+Checking for updates...
+  - Oasis OS is up to date.
+  - Checking for game updates...
+
+Welcome to Oasis OS v2.0.0 (Cactus)!
+
+
+================================================
+               Oasis OS v2.0.0 (Cactus)             
+        Your Gateway to a Gaming Paradise        
+================================================
