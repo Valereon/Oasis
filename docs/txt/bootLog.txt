@@ -16,7 +16,7 @@ Initializing hardware...
   - GPU: Mirage Radeon RX 7700 XT
   - RAM: 64GB DDR5 Oasis HyperFlow
   - Storage: 1TB NVMe SSD Oasis Blaze
-  - BIOS version: OasisBios 1.1.0
+  - BIOS version: OasisBios 1.21.4F
 
 Detecting peripherals...
   - USB controllers: OK
@@ -37,12 +37,12 @@ Configuring network interfaces...
     - Default gateway: 192.168.1.1
     - DHCP: Enabled
   - Wi-Fi: Available networks found
-    - SSID: MyWirelessNetwork
+    - SSID: OasisWAN
     - Signal strength: 90%
-    - Encryption: WPA2-PSK
+    - Encryption: WPA4-PSK
     - Connected
   - VPN: Disconnected
-    - VPN server: vpn.example.com
+    - VPN server: vpn.codebreaker.coalition
 
 Mounting filesystems...
   - /dev/sda1 -> /
@@ -64,7 +64,7 @@ Starting system services...
   - sensors: OK
 
 Initializing audio subsystem...
-  - Detected Realtek HD Audio
+  - Detected Sound Blaster 430
   - Channels: 7.1
   - Surround Sound: Enabled
   - Equalizer: Custom settings loaded
@@ -86,11 +86,12 @@ Starting Oasis Desktop Environment...
 Checking for updates...
   - Oasis OS is up to date.
   - Checking for game updates...
+  - No updates skipping...
 
 Welcome to Oasis OS v2.0.0 (Cactus)!
 
 
 ================================================
                Oasis OS v2.0.0 (Cactus)             
-        Your Gateway to a Gaming Paradise        
+               Your Gateway to Paradise        
 ================================================
