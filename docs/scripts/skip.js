@@ -1,13 +1,14 @@
+import { changePage } from "./main.js";
 
 addEventListener("keydown", function (event) {
     if (event.code == "Space") {
         // get the page name
-        let htmlName = window.location.pathname.split("/").splice(-1);
+        let htmlName = sessionStorage.getItem("currentPage");
 
-        if (htmlName == "linuxLog.html") 
-            window.location.replace("/docs/loadingScreen.html");
+        if (htmlName == "boot") 
+            changePage("load", null);
 
-        else if (htmlName == "loadingScreen.html")
-            window.location.replace("/docs/clickerHome.html");
+        else if (htmlName == "load")
+            changePage("home", null);
     }
 });

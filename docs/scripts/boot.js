@@ -1,8 +1,10 @@
+import { changePage } from "./main.js";
 
-window.onload = function()
+
+export function startBoot()
 {
     
-    fetch("../txt/bootLog.txt").then(response => response.text()).then(data => {
+    fetch("./txt/bootLog.txt").then(response => response.text()).then(data => {
 
         let lines = data.split("\n");
         let parent = document.getElementById("log");
@@ -11,12 +13,12 @@ window.onload = function()
     }).catch(error => { console.log(error); });
     
     new Promise(resolve => setTimeout(resolve, 17500)).then(() =>{
-        window.location.replace("/docs/loadingScreen.html");
+        changePage("load", null);
     });
 
 }
 
-function lineScroller(lines, parent, index) {
+export function lineScroller(lines, parent, index) {
     if(index < lines.length) {
         parent.innerText += lines[index];
         parent.innerText += "\n";
@@ -30,7 +32,7 @@ function lineScroller(lines, parent, index) {
 }
 
 // Custom random delay for the OS scroll
-function randomDelay() {
+export function randomDelay() {
     let chance = Math.random();
     if (chance <= 0.5) {
         return Math.random() * 250;

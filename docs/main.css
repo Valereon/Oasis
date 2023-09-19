@@ -19,11 +19,11 @@ body {
 	margin: 15px;
 }
 
-.ascii-art{
+.ascii-art {
 	overflow-x: hidden;
 }
 
-.counter-container{
+.counter-container {
 	display: inline-flex;
 	justify-content: left;
 }
@@ -44,26 +44,26 @@ body {
 	border-radius: 50%;
 	border: 5px solid #2fc313;
 	border-top: 8px solid transparent;
+	position: relative;
+	z-index: -1
+}
+
+.shadow-circle {
+	width: 200px;
+	height: 200px;
+	
 }
 
 .line {
 	width: 5px;
 	height: 50px;
 	background-color: #2fc313;
-	translate:  40px -15px;
+	translate: 40px -15px;
 }
 
-.power-button {
-	background-color: transparent;
-	border: none;
-	box-shadow: 
-	0 0 80px 30px #2fc313,
-	0 0 120px 60px #299439,
-	0 0 170px 90px #427a2c;
-}
 
 #play-power-button {
-	animation: blink-power-button 3s  ease-in-out infinite;
+	animation: blink-power-button 3s ease-in-out infinite;
 }
 
 #play-progress-bar {
@@ -81,21 +81,27 @@ body {
 	10% {
 		width: 20%;
 	}
-  20% {
-    width: 30%;
-  }
-  40% {
-    width: 30%;
-  }
-  65% {
-    width: 60%;
-  }
-  67% {
-    width: 61%;
-  }
-  75% {
-    width: 63%;
-  }
+
+	20% {
+		width: 30%;
+	}
+
+	40% {
+		width: 30%;
+	}
+
+	65% {
+		width: 60%;
+	}
+
+	67% {
+		width: 61%;
+	}
+
+	75% {
+		width: 63%;
+	}
+
 	90% {
 		width: 80%;
 	}
@@ -115,14 +121,17 @@ body {
 	0% {
 		width: 0%;
 	}
+
 	100% {
 		width: 100%;
 	}
 }
-
-
+/* 
+0 0 80px 30px #2fc313,
+0 0 120px 60px #299439,
+0 0 170px 90px #427a2c; */
 @keyframes blink-power-button {
-	50%{
+	50% {
 		opacity: 0;
 	}
 }
@@ -130,10 +139,11 @@ body {
 
 @keyframes show-boot-log {
 	0% {
-		height: 0px;		
+		height: 0px;
 	}
+
 	100% {
 		height: 1500px;
 	}
-	
+
 }
