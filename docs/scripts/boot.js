@@ -11,16 +11,10 @@ window.onload = function()
     }).catch(error => { console.log(error); });
     
     new Promise(resolve => setTimeout(resolve, 17500)).then(() =>{
-        window.location.replace("loadingScreen.html");
+        window.location.replace("/docs/loadingScreen.html");
     });
 
 }
-
-addEventListener("keydown", function(event) {
-    if(event.code == "Space") {
-        window.location.replace("loadingScreen.html");
-    } 
-});
 
 function lineScroller(lines, parent, index) {
     if(index < lines.length) {
