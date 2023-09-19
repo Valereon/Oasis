@@ -25,6 +25,7 @@ addEventListener("keydown", function(event) {
 function lineScroller(lines, parent, index) {
     if(index < lines.length) {
         parent.innerText += lines[index];
+        parent.innerText += "\n";
         window.scrollTo(0,document.body.scrollHeight);
         index++;
         setTimeout(function() {
