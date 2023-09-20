@@ -12,7 +12,10 @@ export function startBoot()
         
     }).catch(error => { console.log(error); });
     
-    new Promise(resolve => setTimeout(resolve, 17500)).then(() =>{
+    new Promise(resolve => setTimeout(resolve, 15000)).then(() =>{
+        let page =  sessionStorage.getItem("currentPage");
+        if (page != "boot")
+            return
         changePage("load", null);
     });
 
