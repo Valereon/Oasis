@@ -33,6 +33,9 @@ export function changePage(pageName, callBack=null) {
         );
 }
 
+/**
+ * Load map from the file
+ */
 export function loadASCIIMap(mapName) {
     let path = "./maps/" + mapName + ".csv";
     fetch(path)
@@ -40,6 +43,9 @@ export function loadASCIIMap(mapName) {
     .then( data => loadMap(data) );
 }
 
+/**
+ * Map the map data into a 2D array of objects
+ */
 export function loadMap(data) {
     let rawData = data.split("\n");
     let lastLine = rawData[rawData.length - 1].split(",");
@@ -61,23 +67,42 @@ export function loadMap(data) {
         let bgColor = lineData[4];
         mapData[x][y] = {ASCII: char, TileColor: color, BGColor: bgColor};
     }
-
+    // Reverse all the arrays since REXPaint does it backwards
     mapData.reverse();
     for (let i = 0; i < mapData.length; i++) {
         mapData[i].reverse();
     }
 
+    writeMapToScreen(mapData);
+}
+function writeMapToScreen(mapData) {
+    let previousColor = "";
+    let currentSpan = null;
     let pre = document.createElement("pre");
+    // pre.style.backgroundColor = "#242120";
     for (let i = 0; i < mapData.length; i++) {
-        for (let j = 0; j < mapData[i].length; j++) {
-            let tile = document.createElement("span");
-            tile.innerText = mapData[i][j].ASCII + "";
-            tile.style.color = mapData[i][j].TileColor;
-            tile.style.backgroundColor = mapData[i][j].BGColor;
-            pre.appendChild(tile);
+
+        currentSpan = document.createElement("span");
+        currentSpan.style.color = mapData[i][0].TileColor;
+        currentSpan.innerText += mapData[i][0].ASCII + " ";
+
+        for (let j = 1; j < mapData[i].length; j++) {
+            let tileData = mapData[i][j];
+
+            if (previousColor != tileData.TileColor) {
+                
+                pre.appendChild(currentSpan);
+                previousColor = tileData.TileColor;
+                currentSpan = document.createElement("span");
+                currentSpan.style.color = tileData.TileColor;
+
+            }
+            currentSpan.innerText += tileData.ASCII + " ";
+
         }
+        pre.appendChild(currentSpan);
+        previousColor = "";
         pre.appendChild(document.createElement("br"));
     }
-    
     document.getElementById("map").appendChild(pre);
-}    
+}
